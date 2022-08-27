@@ -1,5 +1,5 @@
 # Python
- Leitor seja bem-vindo ao meu repositório de códigos em Python!\n
+ Leitor seja bem-vindo ao meu repositório de códigos em Python!/n
  Antes de dar início na leitura deste repositório gostaria de falar um pouco sobre mim.
  Formei no primeiro semestre de 2021 (Formatura 07/2021) em análise e desenvolvimento de sistemas na universidade UNSAP, tive a oportunidade de ter experiencias de  estagiário em análise de dados, posteriormente acumudando na mesma empresa cargo de assisteste e Analista de dados 
 trainee. A minha rotina diária era ETL e na confecção de relatórios.
