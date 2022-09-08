@@ -6,6 +6,7 @@ Observação: A ordem dos códigos estava afetando a multiplicação e a divisã
 variáveis = 1 pois multiplicação e divisão por 0 sempre nos retorna um zero.
 
 
+
 contador: int = 1
 calc = 0
 calc1 = 1
@@ -14,31 +15,36 @@ print('1 Para somar'
       '\n3 Para Mutiplicar'
       '\n4 Para dividir')
 op = int(input('Escolha uma opção: '))
-if op == 1:
-    while (contador != 0):
-        contador = int(input('(Sair(0)) -> Digite um valor: '))
-        calc = contador + calc
 
-    print('Soma:%s' %(calc))
+if op <= 4:
+    if op == 1:
+        while (contador != 0):
+            contador = int(input('(Sair(0)) -> Digite um valor: '))
+            calc = contador + calc
 
-if op == 2:
-    while(contador != 0):
-        contador = int(input('(Sair(0)) -> Digete um valor: '))
-        calc = contador - calc
+        print('Soma:%s' %(calc))
 
-    print('Subtração: %s' %(calc))
+    if op == 2:
+        while(contador != 0):
+            contador = int(input('(Sair(0)) -> Digete um valor: '))
+            calc = contador - calc
 
-if op == 3:
-    while(contador != 0):
-        calc1 = contador * calc1
-        contador = int(input('(Sair(0)) -> Digete um valor: '))
+        print('Subtração: %s' %(calc))
+
+    if op == 3:
+        while(contador != 0):
+            calc1 = contador * calc1
+            contador = int(input('(Sair(0)) -> Digete um valor: '))
 
 
-    print('Multiplicação: %s' %(calc1))
+        print('Multiplicação: %s' %(calc1))
 
-if op == 4:
-    while(contador != 0):
-        calc1 = contador / calc1
-        contador = int(input('(Sair(0)) -> Digete um valor: '))
+    if op == 4:
+        while(contador != 0):
+            calc1 = contador / calc1
+            contador = int(input('(Sair(0)) -> Digete um valor: '))
 
-    print('Divisão: %s' %(calc1))
+        print('Divisão: %s' %(calc1))
+
+else:
+    print('Opção Invalida, reinicie o programa.')
