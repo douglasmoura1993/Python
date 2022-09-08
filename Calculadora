@@ -1,0 +1,44 @@
+Este é um projeto simples de uma calculadora.
+A proposta inicial era criar uma calculadora simples, porém de forma autônoma eu acrescentei um while para deixar mais dinâmico.
+Sei que existe forma melhor de fazer, while mais robusto com gravação dentro de uma lista, porém o tempo não permite.
+
+Observação: A ordem dos códigos estava afetando a multiplicação e a divisão, por esse motivo veras que as ordens são diferentes e que são inicializados com 
+variáveis = 1 pois multiplicação e divisão por 0 sempre nos retorna um zero.
+
+
+contador: int = 1
+calc = 0
+calc1 = 1
+print('1 Para somar'
+      '\n2 Para subtrair'
+      '\n3 Para Mutiplicar'
+      '\n4 Para dividir')
+op = int(input('Escolha uma opção: '))
+if op == 1:
+    while (contador != 0):
+        contador = int(input('(Sair(0)) -> Digite um valor: '))
+        calc = contador + calc
+
+    print('Soma:%s' %(calc))
+
+if op == 2:
+    while(contador != 0):
+        contador = int(input('(Sair(0)) -> Digete um valor: '))
+        calc = contador - calc
+
+    print('Subtração: %s' %(calc))
+
+if op == 3:
+    while(contador != 0):
+        calc1 = contador * calc1
+        contador = int(input('(Sair(0)) -> Digete um valor: '))
+
+
+    print('Multiplicação: %s' %(calc1))
+
+if op == 4:
+    while(contador != 0):
+        calc1 = contador / calc1
+        contador = int(input('(Sair(0)) -> Digete um valor: '))
+
+    print('Divisão: %s' %(calc1))
