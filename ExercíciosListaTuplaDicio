@@ -90,8 +90,13 @@ print('Dicionario: ', listaDeQuatroElementos[2]['Gato'])
 for contar  in listaDeQuatroElementos:
     print(contar)
 
+Exercício 10 - Considere a string abaixo. Imprima na tela apenas os caracteres da posição 1 a 18.
+Slicing
+frase = 'Cientista de Dados é o profissional mais sexy do século XXI'
+print(frase[0:18])
 
-
+https://algoritmosempython.com.br/cursos/programacao-python/strings/
+Complemento de leitura para manipular string.
 
 
 
