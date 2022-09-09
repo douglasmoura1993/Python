@@ -1,0 +1,66 @@
+Exercício 1 - Imprima na tela os números de 1 a 10. Use uma lista para armazenar os números.
+
+listaNumeros1a10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for contar in listaNumeros1a10:
+    print(contar)
+listaNumerosVazia = []
+
+Ou
+
+for contar in range(0, 10):
+    num = input('Digite os números de 1 até 10:')
+    listaNumerosVazia.append(num)
+print(listaNumerosVazia)
+
+Exercício 2 - Crie uma lista de 5 objetos e imprima na tela
+
+listaDeObjetos = ['Uva', 'Manga', 'Maçã', 'Pera', 'Abacaxi']
+for contar in listaDeObjetos:
+    print(contar)
+    
+Exercício 3 - Crie duas strings e concatene as duas em uma terceira string
+primeiraString: str = 'Meu'
+segundaString: str = ' é'
+
+print(primeiraString + segundaString + ': Douglas Moura')
+
+ou
+
+nome: str = input('Digite seu nome: ')
+sobreNome: str = input('Digite seu sobre nome: ')
+
+print('Olá '+ nome + ' ' +sobreNome +', tudo bem?')
+
+
+Exercício 4 - Crie uma tupla com os seguintes elementos: 1, 2, 2, 3, 4, 4, 4, 5 e depois utilize a
+função count do objeto tupla para verificar quantas vezes o número 4 aparece na tupla.
+
+tuplaDeElementos = (1, 2, 2, 3, 4, 4, 4, 5)
+print(tuplaDeElementos.count(4))
+
+
+Exercício 5 - Crie um dicionário vazio e imprima na tela
+
+dicionarioVazio = {}
+dicionarioNome = {'Douglas': 1}
+
+Imprimindo o vazio
+print(dicionarioVazio)
+
+Imprimindo o valor da chave Douglas.
+print(dicionarioNome['Douglas'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
