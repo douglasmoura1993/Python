@@ -50,8 +50,45 @@ print(dicionarioVazio)
 Imprimindo o valor da chave Douglas.
 print(dicionarioNome['Douglas'])
 
+Exercício 6 - Crie um dicionário com 3 chaves e 3 valores e imprima na tela
 
+dicionarioTres = {'Douglas': 29, 'Ingrid': 27, 'Helena': 1.4}
+print(dicionarioTres)
 
+ou
+
+for contar in dicionarioTres:
+    print(contar) #Imprime as Chaves.
+    print(dicionarioTres[contar]) #Imprime os valores que corresponde as chaves.
+
+Exercício 7 - Adicione mais um elemento ao dicionário criado no exercício anterior e imprima na tela
+
+dicionarioTres = {'Douglas': 29, 'Ingrid': 27, 'Helena': 1.4}
+dicionarioTres ['Douglas Jr.'] = 0
+print(dicionarioTres)
+
+Exercício 8 - Crie um dicionário com 3 chaves e 3 valores.
+Um dos valores deve ser uma lista de 2 elementos numéricos.
+Imprima o dicionário na tela.
+
+dicionarioLista = {'Douglas': 29, 'Ingrid': 27, 'Filhos': [1, 2]}
+
+print(dicionarioLista) #Imprimindo dicionário com lista.
+print(dicionarioLista['Filhos'][1]) #Imprimindo na chave 'Filhos' a posição 1 da lista
+
+Exercício 9 - Crie uma lista de 4 elementos. O primeiro elemento deve ser uma string,
+o segundo uma tupla de 2 elementos, o terceiro um dcionário com 2 chaves e 2 valores e
+o quarto elemento um valor do tipo float.
+Imprima a lista na tela.
+
+listaDeQuatroElementos = ['Douglas', (1, 10), {'Gato': 2, 'Sapato': 10}, 1.10]
+
+print('Lista: ', listaDeQuatroElementos)
+print('Tupla: ', listaDeQuatroElementos[1][1])
+print('Dicionario: ', listaDeQuatroElementos[2]['Gato'])
+
+for contar  in listaDeQuatroElementos:
+    print(contar)
 
 
 
