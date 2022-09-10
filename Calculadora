@@ -1,7 +1,7 @@
 Este é um projeto simples de uma calculadora.
 A proposta inicial era criar uma calculadora simples, porém de forma autônoma eu acrescentei um while para deixar mais dinâmico.
 Sei que existe forma melhor de fazer, while mais robusto com gravação dentro de uma lista, porém o tempo não permite.
-
+Este mesmo desafio pode ser criado usando funções
 Observação: A ordem dos códigos estava afetando a multiplicação e a divisão, por esse motivo veras que as ordens são diferentes e que são inicializados com 
 variáveis = 1 pois multiplicação e divisão por 0 sempre nos retorna um zero.
 
@@ -48,3 +48,48 @@ if op <= 4:
 
 else:
     print('Opção Invalida, reinicie o programa.')
+    
+    
+    CALCULADORA USANDO FUNÇÕES:
+    
+def soma(n1, n2):
+    somaFinal = float(n1 + n2)
+    print(somaFinal)
+
+def multiplicacao(n1, n2):
+    somaFinal = float(n1 * n2)
+    print(somaFinal)
+
+def subtracao(n1, n2):
+    somaFinal = float(n1 - n2)
+    print(somaFinal)
+
+def divisao(n1, n2):
+    somaFinal = float(n1 / n2)
+    print(somaFinal)
+
+menu = int(input('Menu de opções:'
+                 '\n1-Soma;'
+                 '\n2-Multiplicação;'
+                 '\n3-Subtração;'
+                 '\n4-Divisao.'
+                 '\n$: '))
+if menu == 1:
+    n1 = float(input('N1: '))
+    n2 = float(input('N2: '))
+    soma(n1, n2)
+
+elif menu == 2:
+    n1 = float(input('N1: '))
+    n2 = float(input('N2: '))
+    multiplicacao(n1, n2)
+elif menu == 3:
+    n1 = float(input('N1: '))
+    n2 = float(input('N2: '))
+    subtracao(n1, n2)
+elif menu == 4:
+    n1 = float(input('N1: '))
+    n2 = float(input('N2: '))
+    divisao(n1, n2)
+else:
+    print('Opção Invalida')
