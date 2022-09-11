@@ -1,0 +1,25 @@
+Exercício 1 - Crie uma estrutura que pergunte ao usuário qual o dia da semana. Se o dia for igual a Domingo ou igual a sábado, imprima na tela "Hoje é dia de descanso", 
+caso contrário imprima na tela "Você precisa trabalhar!"
+
+diaSemana = input('Olá, que dia da semana é hoje? '
+               '\n$: ')
+if diaSemana.lower() == 'sábado' or diaSemana.lower() == 'domingo' or diaSemana.lower() == 'sabado':
+    print('Hoje é dia de descanso!')
+else:
+    print('Você precisa trabalhar!')
+    
+    
+Exercício 2 - Crie uma lista de 5 frutas e verifique se a fruta 'Morango' faz parte da lista
+
+cestaDeFrutas = ['Uva', 'Mexerica', 'Mamão', 'Morango', 'Pera']
+
+for conta in cestaDeFrutas:
+    if conta == 'Morango':
+        print('Temos morando na lista!')
+        
+
+
+
+
+
+
