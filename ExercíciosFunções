@@ -28,16 +28,27 @@ imprimeindoSequencia3()
 A proposta é mostrar que o mesmo problema pode ser solucionado de formas diferentes. 
 Para o método range imprimir o valor 20 precisamos mudar o valor máximo para 22 (range(inicio, maximo, intevaloDeContagem)) ou fazer como no terceiro usando while.
 
+Exercício 2 - Crie uam função que receba uma string como argumento e retorne a mesma string emlç letras maiúsculas. 
+Faça uma chamada à função, passando como parâmetro uma string.
 
+def textoUpper(texto):
+    print(texto.upper())
+
+textoUpper('douglas moura é ótimo estudante!')
 
 
 Exercício 3 - Crie uma função que receba como parâmetro uma lista de 4 elementos, adicione 2 elementos a lista e imprima a lista
 
-def adicionarNaLista (listaAqui: int):
+listaDeElementos = [1, 2, 3, 4]
+def adicionarNaLista(listaAqui: list):
     qtdElementos = int(input('Quantos elementos deseja adicionar?: '))
     for contar in range(qtdElementos):
         elemento = int(input('Digite o elemento: '))
         listaAqui.append(elemento)
     print(listaAqui)
 
-adicionarNaLista([1, 2, 3, 4])
+adicionarNaLista(listaDeElementos)
+
+
+
+
