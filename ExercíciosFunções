@@ -1,0 +1,43 @@
+# Exercício 1 - Crie uma função que imprima a sequência de números pares entre 1 e 20 (a função não recebe parâmetro) e depois faça uma chamada à função para 
+listar os números
+
+def imprimeindoSequencia ():
+    for contar in range(0, 20, 2):
+        print(contar)
+
+
+def imprimeindoSequencia2 ():
+    contadorRange = 20
+    for contar in range(contadorRange):
+        if contar % 2 == 1:
+            print(contar + 1)
+
+imprimeindoSequencia2()
+
+
+def imprimeindoSequencia3 ():
+    contar = 1
+    while contar <= 20:
+        if contar % 2 == 0:
+            print(contar)
+        contar = contar + 1
+
+imprimeindoSequencia3()
+
+
+A proposta é mostrar que o mesmo problema pode ser solucionado de formas diferentes. 
+Para o método range imprimir o valor 20 precisamos mudar o valor máximo para 22 (range(inicio, maximo, intevaloDeContagem)) ou fazer como no terceiro usando while.
+
+
+
+
+Exercício 3 - Crie uma função que receba como parâmetro uma lista de 4 elementos, adicione 2 elementos a lista e imprima a lista
+
+def adicionarNaLista (listaAqui: int):
+    qtdElementos = int(input('Quantos elementos deseja adicionar?: '))
+    for contar in range(qtdElementos):
+        elemento = int(input('Digite o elemento: '))
+        listaAqui.append(elemento)
+    print(listaAqui)
+
+adicionarNaLista([1, 2, 3, 4])
