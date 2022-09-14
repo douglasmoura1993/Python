@@ -37,6 +37,7 @@ print(arq2.read())
 
 print(arq2.seek(0, 0))
 
+#Contando as linhas contidas no arquivo.
 arquivo = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/salarios.txt', 'r') #Abrindo
 data = arquivo.read() #Lendo arquivo
 rows = data.split('\n') #Split divide os textor no (\n = enter)
@@ -48,4 +49,25 @@ for contar in rows:
         full_data.append(separaLinhas) #Armazenado em uma vaiável.
     contador = contador + 1
 print(full_data) #Imprimindo a lista
+
+#Contando as colunas do arquivo.
+
+arquivo = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/salarios.txt', 'r') #Abrindo
+data = arquivo.read() #Lendo arquivo
+linhas = data.split('\n') #Split divide os textor no (\n = enter)
+full_data = []
+
+contador = 0
+#contando colunas.
+for contar in linhas:
+    dividirLinhas = contar.split(',')
+    full_data.append(dividirLinhas)
+    primeiraLinha = full_data[0]
+
+for colunas in primeiraLinha:
+    contador = contador + 1
+
+print(contador)
+
+
 
