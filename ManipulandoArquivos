@@ -1,1 +1,51 @@
+# Ao copiar o caminho do arquivo do SOP inveter as barras de '\' para '/'
+# Open método para abrir o arquivo.
+# 'URL', 'r'(para ler usamos r e gravar w).
+arq1 = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/arquivo1.txt', 'r')
+# Read método para ler o conteúdo do arquivo.
+print(arq1.read())
+# Tell método que conta a quantidade de caracteres contidos no arquivo, espaço também conta.
+print(arq1.tell())
+# Seek retorna para o início do arquivo. Util para ler e gravar em um ponto do arquivo.
+# seek(coordenada linha, coordenada coluna).
+print(arq1.seek(0, 0))
+# read(10) vai ler os 10 primeiros caracteres, porém ele precisa ler de onde o cursor está posicionado e por isso
+# podemos usar o metodo seek para posicionar o cursor e eler as informações.
+print(arq1.read(10))
+
+#Gravando Arquivos
+
+# Para abrir um arquivo para gravação basta por URL, 'w'.
+arq2 = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/gravacao1.txt', 'w')
+# Arquivos aberto para leitura não suporta metodo read.
+# print(arq2.read())
+
+# Escrevendo mensagem no arquivo com .write
+arq2.write('Testando gravação de arquivos em python')
+# Fechando o arquivo com .close
+arq2.close()
+# Abrindo o arquivo
+arq2 = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/gravacao1.txt', 'r')
+# Lendo conteúdo do arquivo
+print(arq2.read())
+# Metodo w sobrescreve o texto e a cria um novo registro.
+arq2 = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/gravacao1.txt', 'a')
+arq2.write('\nMais conteúdo')
+arq2.close()
+arq2 = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/gravacao1.txt', 'r')
+print(arq2.read())
+
+print(arq2.seek(0, 0))
+
+arquivo = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/salarios.txt', 'r') #Abrindo
+data = arquivo.read() #Lendo arquivo
+rows = data.split('\n') #Split divide os textor no (\n = enter)
+full_data = []
+contador = 0
+for contar in rows:
+    if contador <= 1:
+        separaLinhas = contar.split(',') #Split dividindo texto por ,
+        full_data.append(separaLinhas) #Armazenado em uma vaiável.
+    contador = contador + 1
+print(full_data) #Imprimindo a lista
 
