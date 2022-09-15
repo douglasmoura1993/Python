@@ -69,5 +69,154 @@ for colunas in primeiraLinha:
 
 print(contador)
 
+# Abrindo arquivo com biblioteca pandas.
+import pandas as pd
+
+file_name = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/binary.txt')
+df = pd.read_csv(file_name)
+print(df.head())
+
+nome_arquivo = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/salarios.txt')
+df2 = pd.read_csv(nome_arquivo)
+print(df2.head())
 
 
+texto = 'Ciencia de Dados é a profissão que mais tem crescido em todo o mundo.\n'
+texto = texto + 'Esses profissionais precisam se especializar em programação, estatística e machine learning.\n'
+texto += 'E claro, em big data.'
+
+print(texto)
+
+# Importando o pocate OS(oparete system)
+import os
+
+#Criando um arquivo.
+arquivo = open(os.path.join('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/cientista.txt'), 'w')
+
+#gravando dados no arquivo.
+for palavra in texto.split():
+    arquivo.write(palavra+' ')
+
+#Fechando o arquivo.
+arquivo.close()
+
+#Lendo arquivo.
+arquivo = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/cientista.txt', 'r')
+conteu = arquivo.read()
+arquivo.close()
+
+print(conteu)
+
+#Usando expressão with.
+#Com(with) open(caminho) abra como(as) arquivo
+with open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/cientista.txt', 'r') as arquivo:
+    conteu = arquivo.read()
+    print(len(conteu))#Verificando tamanho do conteúdo do arquivo.
+    print(conteu)
+
+with open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/cientista.txt', 'w') as arquivo:
+    arquivo.write(texto[:21]) #Armazena parte do texto com slicing até posição 0 a 21-1
+    arquivo.write('\n')
+    arquivo.write(texto[:33]) #Armazena parte do texto com slicing até posição 0 a 33-1
+
+#Imprimindo as partes do texto so slicing.
+arquivo = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/cientista.txt', 'r')
+conteu = arquivo.read()
+arquivo.close()
+
+print(conteu)
+
+# Para tratar arquivos CSV precisamos antes importar a biblioteca.
+import csv
+
+with open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/numeros.csv', 'w') as arquivo:
+    writer = csv.writer(arquivo)
+    writer.writerow(('Primeira', 'Segunda', 'Terceira'))
+    writer.writerow((55, 93, 76))
+    writer.writerow((62, 14, 86))
+
+# Lendo arquivo csv.
+with open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/numeros.csv', 'r') as arquivo:
+    leitor = csv.reader(arquivo)
+    for contar in leitor:
+        if len(contar) > 0: # é para eliminar linhas vazias.
+            print('Numero de colunas: ', len(contar))
+            print(contar)
+        else:
+            pass
+
+#Gerando uma lista com dados do arquivo csv.
+with open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/numeros.csv', 'r') as arquivo:
+    leitor = csv.reader(arquivo)
+    dados = list(leitor) #Converte o conteudo em lista.
+    print(dados)
+
+
+#Imprimindo a partir da segunda linha.
+for linha in dados[1:]:
+    if len(linha) == 0:
+        pass
+    else:
+        print(linha)
+        
+        
+# Manipulando JSON
+#Importando módulo JSON
+import json
+dict = {
+        'Nome': 'Guido Von Rossum',
+        'Linguagem': 'Python',
+        'Similar':['C', 'Modula-3', 'lisp'],
+        'Users': 100000
+        }
+# K == chave; V == Valor in var dict.items()
+for k,v in dict.items():
+    print(k, v)
+
+# o metodo dumps converte o dicionario para um objeto json.
+print(json.dumps(dict))
+
+#Criando arquivo json.
+with open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/dados.json', 'w') as arquivo:
+    arquivo.write(json.dumps(dict))
+
+#Leitura de arquivo Json.
+with open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/dados.json', 'r') as arquivo:
+    texto = arquivo.read()
+    data = json.loads(texto)
+
+print(data)
+print(data['Nome']) # Podemos acessar qualquer elemento, desde que tenha sido convertido em dicionario.
+
+#Imprimindo arquivo json copiado da internet
+import json
+from urllib.request import urlopen
+
+response = urlopen('https://vimeo.com/api/v2/video/57733101.json').read().decode('utf8')
+data = json.loads(response)[0]
+
+print('Título: ', data['title'])
+print('URL: ', data['url'])
+print('Duração: ', data['duration'])
+print('Numero de Visualizações: ', data['stats_number_of_plays'])
+
+# Copiando dados de um arquivo para o outro.
+import json
+import os
+arquivo_fonte = 'C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/dados.json'
+arquivo_destino = 'C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/json_data.txt'
+
+#Método1
+with open(arquivo_fonte, 'r') as infile:
+    texto = infile.read()
+    with open(arquivo_destino, 'w') as outfile:
+        outfile.write(texto)
+
+#Método2
+open(arquivo_destino, 'w').write(open(arquivo_fonte, 'r').read())
+
+#leitura do arquivo json.
+with open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/json_data.txt', 'r') as arquivo:
+    texto = arquivo.read()
+    data = json.loads(texto)
+print(data)
