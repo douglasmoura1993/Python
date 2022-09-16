@@ -1,0 +1,79 @@
+Módulos:
+À medida que o programa vai ficando maior ou mais complexo, podemos dividi-lo em módulos para facilitar a manutenção ou usar uma função criada em vários programas sem ter que copiar a sua definição em cada um.
+Para isso podemos ciar módulos. Módulos são simples arquivos com a extensão .py, que implementa um conjunto de funções. 
+Os módulos são importados em scripts, usando o comando import:
+Ex: import math
+Depois de ciado os módulos nós podemos importá-lo para o código sem o uso da extensão .py como mostra o exemplo abaixo:
+> modulo_operacoes.py
+> import modulo_operacoes
+Quando usamos neste formato todas as funções contidas dentro do script do seu módulo são importadas para dentro do seu novo script.
+Caso queira apenas uma função do módulo devemos usar a nomenclatura a seguir:
+> from modulo_soma import soma
+Para listar algumas das funções como no módulo anaconda nós precisamos digitar no prompt de comando a seguinte instrução: ‘conda list’.
+Podemos instalar qualquer módulo no python desde que o módulo tenha a mesma versão do python.
+ Para instalar um módulo python no prompt de comando precisamos usar as instruções:
+> pip install ‘nome do módulo’
+		Ou
+> conda install ‘nome do módulo’
+Pacotes:
+Pacotes são uma forma de estruturar os módulos python.
+Ex: import ‘nome do módulo’ – para único arquivo.
+Ou import ‘nome do’ pacote.modulo ‘que será utilizado’.
+Um pacote é um conjunto de módulos python, enquanto um módulo é um único arquivo em python, um pacote é um diretório de módulos python contendo um arquivo __init__.py(indica que o diretório contém vários módulos).
+O repositório de pacotes do python, é o PyPi (Python Package Index) com mais de 130 mil pacotes disponíveis.
+
+
+Módulos e Pacotes
+#Importando um módulo em python
+import math
+
+#Comando para verificar todos os métodos do módulo
+#Usando um dos métodos do módulo math
+math.sqrt(25)
+ 
+#Importando apenas um dos métodos do módulo math
+#   método      função
+from math import sqrt
+
+#Usando o método
+sqrt(9)
+print(dir(math))
+
+help(sqrt)
+
+#random
+import random
+random.choice(['Maça', 'Banana', 'Laranja'])
+random.sample(range(100),10) #Gera amostra com o metodo sample
+
+import statistics
+dados = [2.75, 1.75, 1.25, 0.25, 0.5, 1.25, 3.5]
+statistics.mean(dados)
+statistics.median(dados)
+
+import os
+os.getcwd() #Mostra o diretório.
+os
+print(dir(os))
+
+import sys
+sys.stdout.write('teste')
+sys.version
+print(dir(sys))
+
+# Importando módulo request do pacote utllib, usado para trazer url's
+# para dentro do nosso ambiente python
+import urllib.request
+
+# Variável resposta armazena o objeto de conexão à url passada como parâmetro
+resposta = urllib.request.urlopen('http://python.org')
+
+# Objeto resposta
+print(resposta)
+<http.client.HTTPResponse object at 0x000001F8E7416190>
+
+#Chamando o método read() do objeto resposta e armazenado o código html na variável html
+html = resposta.read()
+
+# Imprimindo html
+print(html)
