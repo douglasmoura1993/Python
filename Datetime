@@ -1,0 +1,42 @@
+Datetime
+
+Esse módulo permite a manipulação de datas em Python.
+
+#Impostando o módulo datetime
+import datetime
+#variavel = padote.módulo.função()
+agora = datetime.datetime.now()
+#Retorna a data correte no formato( ano, mês, dia, hora, minuto, segundo, milessegundo )
+agora
+agora
+#Colocando agora dentro do print ele retorna em um formato mais agradável
+print(agora)
+.time para formatar a data como desejado.
+#Podemos usar o módulo datetime.time para formatar a data como desejado.
+t = datetime.time(7, 43, 28, 120)
+print(t)
+#Imprimindo datetime usando os métodos hour, minute, second, microsecond.
+print('Hora:', t.hour)
+print('Minuto:', t.minute)
+print('Segundo:', t.second)
+print('Microsegundo:', t.microsecond)
+Segundos
+#Segundos
+print(datetime.time.min)
+#datetime.datetime nos da um maior controle no dominio das datas. Com ele podemos pegar além do dia as horas e os minutos.
+hoje = datetime.datetime.today()
+print(hoje)
+print('ctime', hoje.ctime())
+print('Ano:', hoje.year)
+print('Mês:', hoje.month)
+print('Dia:', hoje.day)
+print('Horas:', hoje.hour)
+print('Minutos:', hoje.minute)
+print('Segundos:', hoje.second)
+print('Microsegundo:',hoje.microsecond)
+d1 = datetime.date(2022, 9, 16)
+print('d1:', d1)
+d2 = d1.replace(year = 2023) # Replace substitui o ano de 2022 para 2023
+print('d2:', d2)
+# Diferença em dias entre duas datas
+d2 - d1
