@@ -1,0 +1,26 @@
+A função filter recebe dois argumentos assim como a função map() e reduce.
+O primeiro argumento é o nome da função que será aplicada e o segundo é uma sequência com uma lista.
+A função oferece uma maneira conveniente para filtrar todos os elementos de uma sequência, para os quais a função retorne true. O retorno é um booleano true ou false.
+A função aplica uma regra a uma lista e só retorna os valores onde o correspondente seja igual a true. 
+
+# Função Filter
+def verificaPar(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
+      
+Chamando a função e passando um número como parâmetro. Retornará False se for imprar e True se for par.
+verificaPar(35)
+
+lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+
+for contar in lista:
+    print(contar)
+    
+Aplicando função filter com função verificaPar para retornar apenas os valores par da lista.
+filter(verificaPar, lista)
+
+list(filter(verificaPar, lista))
+list(filter(lambda x: x % 2 == 0, lista))
+list(filter(lambda num: num > 8, lista))
