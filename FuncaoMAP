@@ -1,3 +1,14 @@
+BuiltIn:
+Python fornece várias funções que permite uma abordagem funcional à programação, oferece mais facilidade na criação do seu código.
+Programação funcional é uma programação orientada à expressão.
+Funções orientadas à expressão, em Python:
+map (função, sequência)
+reduce (função, sequência)
+filter (função, sequência)
+lambda
+list comprehension
+o primeiro argumento é o nome de uma função e o segundo uma sequência (por exemplo, uma lista)
+map(FuncSoma, listaNumeros), desta forma a função é aplicada a todos os elementos da sequência e uma nova lista é retornada.
 
 Criando duas funções
 
