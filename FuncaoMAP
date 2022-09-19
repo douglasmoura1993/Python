@@ -1,0 +1,34 @@
+
+Criando duas funções
+
+Função1 - Recebe uma temperatura como parâmetro e retorna a temperatura em Fahrenheit
+def fahrenheit(temperatura):
+    return ((float(9)/5) * temperatura + 32)
+
+temperaturas = [0, 22.5, 40, 100]
+
+Aplicando a função a cada elemento da lista de temperaturas.
+Em Python3, a função map() retorna um iterator. Sabendo disso precisamos converter o resultado em formato lista.
+map(fahrenheit, temperaturas)
+
+Função map() retornando uma lista de temperaturas convertidas em Fahrenheit
+list(map(fahrenheit, temperaturas))
+
+Usando um loop for para imprimir o resultado da função map
+for contar in map(fahrenheit, temperaturas):
+    print(contar)
+    
+Função2 - Recebe uma temperatura como parâmetro e retorna a temperatura em Celcius
+def celsius(temperatura):
+    return (float(5)/9) * (temperatura - 32)
+    
+list(map(celsius, temperaturas))
+
+Somando elementos de duas listas e três.
+listaUm = [1, 2, 3, 4]
+listaDois = [6, 7, 8, 9]
+listaTres = [10, 11, 12, 13]
+
+list(map(lambda x, y: x+y, listaUm, listaDois))
+
+list(map(lambda x, y, z: x + y + z, listaUm, listaDois, listaTres))
