@@ -1,0 +1,37 @@
+A função reduce() recebe dois argumentos assim como a função map().
+O primeiro argumento é o nome da função que será aplicada e o segundo é uma sequência com uma lista.
+Ao contrário da função map que aplicar a função para cada elemento e retorna uma lista com os elementos, a função reduce aplica a função passada como parâmetro aos 
+elementos da sequência, até que reste apenas um elemento.
+
+# Importando a função reduce do módulo functools.
+from functools import reduce
+
+lista = [47, 11, 42, 13]
+
+for contar in lista:
+    print(contar)
+
+# Função.
+def soma (a,b):
+    x = a + b
+    return x
+
+# Usando reduce com função e uma lista. A Função vai retornar o valor máximo.
+# Boa para somar valores dentro de uma lista ou interválo. 
+reduce(soma, lista)
+
+# Importando imagem.
+from IPython.display import Image
+Image('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/reduce.png')
+
+lst = [27, 11.3, 42, 13]
+
+reduce(lambda x, y: x + y, lst)
+
+# Percorrendo a lista para achar o maior valor.
+max_find2 = lambda a, b: a if (a > b) else b
+
+# Verificando o tipo da variável.
+type(max_find2)
+
+reduce(max_find2, lst)
