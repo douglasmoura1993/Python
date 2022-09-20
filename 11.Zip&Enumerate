@@ -1,0 +1,72 @@
+A função zip é responsável em agregar (unir) os valores de duas sequências e retornar uma tupla.
+Zip(sequência, sequência).
+Ideal para quando o número de elementos for diferente em cada sequência. Mas o objeto resultante terá o mesmo número de elementos da sequência menor.
+
+> Zip([1,2,3,4], [5,6,7])
+Retorno um interatorprecisamos converte para list para poder ver a saída como lista contendo tuplas = [(1, 5), (2, 6), (3, 7)]. 
+O número quatro é ignorado pois a lista dois é menor que a lista um.
+
+A função enumerate retorna o índice de cada valor em uma sequência, à medida que você pode percorrer toda a sequência.
+Enumerate retorna uma tupla no formato tupla (índice, valor).
+A função recebe apenas um parâmetro, enumerate (sequência).
+Também retorna um iterator.
+
+ZIP:
+
+ # Criando listas
+lista1 = [3, 4]
+lista2 = [4, 5, 6]
+# Saída como iterator
+zip(lista1, lista2)
+# Convertendo para lista, a saída será uma lista contendo duas tuplas.
+list(zip(lista1, lista2))
+# Criando dicionários.
+d1 = {'a': 1, 'b': 2}
+d2 = {'c': 4, 'd': 5}
+# Zip vai unir as chaves.
+list(zip(d1, d2))
+# Zip pode unir os valores (itens) usando .values()
+list(zip(d2, d2.values()))
+
+dir(zip())
+
+# Criando uma função para trocar valores entre dois dicionários.
+def trocarValores (seqA, seqB):
+    dicTemp = {}
+    
+    for seqAkey, seqBval in zip(seqA, seqB.values()):
+        dicTemp[seqAkey] = seqBval
+    return dicTemp
+    
+trocarValores(d1, d2)
+___________________________________________________________________________________________________________________________________________________
+
+> ENUMERATE.
+
+seq = ['a', 'b', 'c']
+
+#Função enumerate
+enumerate(seq)
+# Índice de cada valor da lista 2.
+list(enumerate(seq))
+# Imprimindo os valores de uma lista com a função enumerate() e seus respectivos índices.
+for indice, valor in enumerate(seq):
+    print(indice, valor)
+
+for chave, valor in enumerate(seq):
+    if chave >= 2:
+        break
+    else:
+        print(valor)
+        
+ lista = ['MKT', 'TI', 'BUSINESS']
+ 
+ # Criando um índice para uma lista.
+for i, item in enumerate(lista):
+    print(i, item)
+    
+ for i, item in enumerate('Isso é uma string'):
+    print(i, item)
+ 
+ for i, item in enumerate(range(10)):
+    print(i, item)
