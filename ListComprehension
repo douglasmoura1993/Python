@@ -1,3 +1,10 @@
+List Comprehension, aplica uma expressão arbitrária ao invés de aplicar apenas uma função a uma sequência de elementos.
+ Permite desenvolver listas usando uma anotação diferente. Seria essencialmente uma lista de loop for, construída dentro de ‘[]’.
+Ex: lst = [ x for x in ‘Python fundamentos’]
+Nós normalmente usamos loop for quando trabalhamos com funções map() e usamos list comprehension quando esta for mais fácil de ser aplicada. No entanto, há uma vantagem substancial de desempenho ao utilizar a list comprehension.
+Os objetos do tipo list comprehension são ligeiramente mais velozes que função map.
+As duas são implementadas em python utilizando linguagem C, o que as tornam muito mais velozes.
+
 List Comprehension
 Estrutura importante para grandes conjuntos de dados com alta performance, e simplifica a escrita de código.
 Essa estrutura faz compactação das linhas de código, a anotação é diferente das outras estruturas. Colocamos dentro de uma lista ‘[]’ o código como podemos ver nos 
