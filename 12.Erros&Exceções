@@ -1,0 +1,125 @@
+Erros e Exceções:
+Try, Except, Finally, Continue.
+Para tratar os erros primeiro precisamos saber qual o tipo de erro retornado pela IDE. Na grande maioria das vezes a mensagem de erro explica o que está acontecendo.
+EX:
+Print(‘ola)
+Erro:
+SyntaxError: EOL while scanning string literal.
+>Ele aponta que estamos com um erro de sintaxe, e vendo o comando podemos dizer que falta uma ‘ na função print.
+Erros podem já ter sido registrado em outro momento por outros usuários, por isso sempre pesquise.
+
+8 + 's'
+
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Input In [2], in <cell line: 1>()
+----> 1 8 + 's'
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+# Ultilizando try e except
+try:
+    8 + 's'
+except TypeError:
+    print('Operação não permitida, você tenteu somar um valor numérico com um texto')
+ 
+Operação não permitida, você tenteu somar um valor numérico com um texto
+
+# Utilizando try, except e else
+try:
+    f = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/testandoerros.txt', 'w')
+    f.write('Gravando no arquivo')
+except IOError:
+    print('Erro: arquvivo não encontrado ou não pode ser salvo.')
+else: 
+    print('Conteúdo gravado com sucesso!')
+    f.close()
+    
+
+Conteúdo gravado com sucesso!
+
+# Utilizando try, except e else
+try:
+    f = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/testandoerros', 'r')
+except IOError:
+    print('Erro: arquvivo não encontrado ou não pode ser salvo.')
+else: 
+    print('Conteúdo gravado com sucesso!')
+    f.close()
+Erro: arquvivo não encontrado ou não pode ser salvo.]
+
+# Utilizando try, except e else
+try:
+    f = open('C:/Users/GomesMoura/PycharmProjects/CAP04/Documentos/testandoerros.txt', 'w')
+    f.write('Douglas Moura')
+except IOError:
+    print('Erro: arquvivo não encontrado ou não pode ser salvo.')
+except NameError:
+    print('Você digitou a sintaxe errada, verifique seu código')
+else: 
+    print('Conteúdo gravado com sucesso!')
+    f.close()
+finally: # 
+    print('Comandos no bloco finally são sempre executados!')
+
+askint()
+
+Digite um número: 
+Obrigado!
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Input In [28], in <cell line: 1>()
+----> 1 askint()
+
+Input In [27], in askint()
+      1 def askint():
+      2     try:
+----> 3         val = int((input('Digite um número: ')))
+      4     except UnboundLocalError: #ValueError: 
+      5         print('Você não digitou um número!')
+
+ValueError: invalid literal for int() with base 10: ''
+
+def askint():
+    try:
+        val = int((input('Digite um número: ')))
+    except: #UnboundLocalError: #ValueError: 
+        print('Você não digitou um número!')
+        val = int(input('Tente novamente. Digite um número: '))
+    finally:
+        print('Obrigado!')
+    print(val)
+
+askint()
+
+Digite um número: 10
+Obrigado!
+10
+
+# Loop para coletar inteiro 
+
+def askint ():
+    while True:
+        try:
+            val = int(input('Digite um número: '))
+        except: 
+            print('Você não digitou um número!')
+            continue
+        else:
+            print('Obrigado por digitar um número!')
+            break
+        finally:
+            print('Fim da execução!')
+        print(val)
+ askint()
+ tuple = (1, 2, 3, 4, 5)
+try:
+    tuple.append(6)
+    for each in tuple:
+        print(each)
+except AttributeError as e:
+    print('Erro:', e)
+except IOError as e:
+    print('Erro de I/O: ', e)
+
+Erro: 'tuple' object has no attribute 'append'
