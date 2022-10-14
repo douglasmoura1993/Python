@@ -1,0 +1,47 @@
+# Saõ funções definidas dentro do corpo de uma classe.
+# São usados para realizar operações com os atributos dos objetos.
+# Métodos são usados no conceito de encapsulamento, do paradigma de POO.
+# São funções definidas em uma classe, para manipular os objetos criados a partir da classe.
+# Os métodos(funções) são criados usando a palavra reservada def.
+# Podemos usar classes para atividades de análise de dados e criar métodos específicos para cada tarefa, 
+# encapsulando nossa lógica de programação.
+# O motivo principal na criação de métodos e para que o programador possa manipular os atributos.
+
+# Declarando a classe Circulo.
+class Circulo():
+    # Variável PI (estática)
+    pi = 3.14
+    # Quando um objeto desta classe for criado, este método será executado e o valor default do raio será 5.
+    def __init__(self, raio = 5):
+        self.raio = raio
+    # Declarando um atributo do 'tipo self' que recebe o valor do parâmetro raio.
+    
+    # Método que calcula a área. Self utiliza os atributos deste mesme objeto.
+    def area(self):
+        return(self.raio * self.raio) * Circulo.pi
+    
+    # Método para gerar um novo raio.
+    def setRaio(self, novo_raio):
+        self.raio = novo_raio
+        
+    # Método para obter o raio do círculo.
+    def getRaio(self):
+        return self.raio
+    
+# Criando o objeto circ. Uma instância da classe Circulo().
+circ = Circulo()
+
+# Executando um método da classe Circulo.
+circ.getRaio()
+# Imprimindo Raio.
+print( 'O Raio é == ', circ.getRaio())
+
+
+# Imprimindo a área.
+print( 'Área igual a ', circ.area())
+
+# Gerando um novo valor para o raio do círculo
+circ.setRaio(3)
+
+# Imprimindo novo Raio.
+print('Novo raio igual a', circ.getRaio())
