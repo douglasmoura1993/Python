@@ -1,0 +1,72 @@
+POO – Programação orientada a objeto Python.
+Fundamentos.
+Python é uma linguagem de programação completamente orientada a objeto. O que isso quer dizer?: Que tudo na linguagem é um objeto.
+  	A orientação a objetos é um modelo de análise, projeto e programação de sistemas de software baseado na composição e interação entre diversas unidades de software chamadas de objetos.
+  	Criada para aproximar o mundo real e o mundo virtual. A ideia fundamental é tentar simular o mundo real dentro do computador.
+  	Neste mundo o programador é obrigado a moldar o mundo dos objetos, e definir como os objetos devem interagir entre si.
+  	Os objetos precisam conversar entre si através do envio de mensagens e o papel principal do programador é definir quais serão as mensagens que cada objeto pode receber também qual a ação que o objeto deve realizar ao receber cada mensagem.
+  Programação Estruturada vs POO.
+  Programação Estruturada: é uma forma de programação de computadores que preconiza que todos os programas possíveis podem ser reduzidos em três estruturas:
+  	Sequência
+  	Decisão
+  	Iteração (Repetição)
+Na programação estruturada dados e funções compõe a aplicação através de estruturas básica de controle, modularização e tipos abstratos.
+POO: Propõe trazer os objetos do mundo real para a programação. Com uso de classes podemos encapsular os objetos e utilizá-los apenas se tivermos as classes instanciadas e se há permissão para uso externo ou não.
+O benefício é que podemos usufruir de camadas de programação.
+Em POO métodos são funções dentro de classes. E tem como objetivo em manipular o uso do objeto.
+  	CLASSE: Representação de um objeto no mundo físico.
+  	ATRIBUTO ou PROPRIEDADES: Características do objeto.
+  	AÇÃO ou COMPORTAMENTO: Algo que o objeto faz.
+CLASSE - CACHORRO
+ATR – TAMANHO: FLOAT
+ATR – RACA: STRING
+AÇÃO() - *latir()
+
+Ao manipular o código nós criamos objetos, ou seja, instanciar a classe.
+No caso do exemplo acima, todo novo registro de um animal da classe cachorro é uma instancia da classe.
+Abstração é o ato de interpretar o objeto no mundo real e transmiti-lo para o mundo da computação.
+Principais conceitos de POO:
+  	Classe;
+  	Objeto;
+  	Atributos;
+  	Métodos;
+  	Mensagem;
+  	Herança;
+  	Polimorfismo;
+  	Encapsulamento.
+Classe: Abstração computacional que representa entidades do mundo real, classe nada mais é do que um template (Template é um documento de conteúdo, com apenas a apresentação visual e instruções sobre onde e qual tipo de conteúdo deve entrar a cada parcela da apresentação — por exemplos conteúdos que podem aparecer no início e conteúdo que só podem aparecer no final. Funciona como uma predefinição usada na linguagem Wiki. Wikipédia).
+Cada instancia de uma classe é um objeto.
+Objeto(Registro): é uma instância de uma classe que possui atributos que são características ou propriedades do objeto.
+Atributos: São características ou propriedades, que ajudam a identificar os objetos.
+Métodos: São ações dos objetos. Podemos afirmar que são funções dentro de uma classe.
+Mensagem: Chamada a um objeto para invocar um dos métodos.
+Herança: Mecanismo pelo qual uma classe, chamada ‘subclasse’, pode estender uma outra classe chamada de ‘superclasse’ aproveitando os atributos e métodos. Subclasse herda atributos da superclasse.
+Permite o compartilhamento de métodos, atributos entre classes.
+Polimorfismo: Princípio que permite que as classes derivadas de uma única classe base são capazes de invocar os métodos que embora apresentem a mesma definição comportam-se de maneira diferente para cada uma das classes derivadas. 
+Assim os mesmos atributos e métodos podem ser utilizados em objetos distintos, porém, com implementações lógicas diferentes.
+Encapsulamento: Os detalhes internos do funcionamento dos métodos de uma classe se tornam ocultos para os objetos.
+Do ponto de vista do objeto o conhecimento a respeito da implementação interna da classe é desnecessário.
+Classe e Objetos:
+Classe é a estrutura básica do paradigma de orientação a objetos, que representa o tipo do objeto, um modelo a partir do qual os objetos serão criados. Uma classe é apenas um modelo. Uma especificação que define o que um objeto desse tipo deverá ter como atributo e como ele deve se comportar.
+A classe é uma espécie de template que define a natureza de um futuro objeto. E a partir dessas mesmas classes, nós construímos instâncias. 
+E cada instância é um objeto, que é um objeto específico criado a partir de uma classe.
+Os objetos representam entidades, com suas qualidades (atributos) e ações (métodos) que estas podem realizar.
+Objetos definidos pelo usuário em Python são criados a partir de instâncias de classes criadas usando a palavra reservada class.
+Nomes de classe começa por letra maiúscula.
+  SOCIO
+  +Nome
+  +Cpf
+  +Rg
+  +Nascimento
+  +Telefone
+  +Endereço
+  +Cadastrar()
+  +ConfirmarCadastro()
+  +Alterar()
+  objeto
+  Atributos
+  João
+  José
+  Métodos
+
+
