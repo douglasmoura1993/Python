@@ -1,0 +1,80 @@
+#Criando uma classe chamada livro
+class Livro():
+    
+    # Este método vai inicializar cada objeto criado a partir desta classe.
+    # O nome do método é __init__
+    # (self) é uma referência a cada atributo de um objeto criado a partir desta classe
+    def __init__(self):
+        
+        # Esse é um método construtor.
+        # Atributos de cada objeto criado a partir desta colasse.
+        # O self indica que estes são atributos dos objestos.
+        self.titulo = 'O Monge e o Executivo'
+        self.isbn = 9988888
+        print('Construtor chamado para criar um objeto desta classe')
+    
+    # Método são funções, que recebem como parâmetro atributos do objeto criado.
+    def imprime(self):
+        print('Foi criado o livro: %s e ISBN: %d' %(self.titulo, self.isbn))
+
+# Criando uma instância da classe livro.
+Livro1 = Livro()
+
+# Tipo do objeto Livro1
+type(Livro1)
+
+# Atributo do objeto Livro1
+Livro1.titulo
+
+# Método do objeto Livro1
+Livro1.imprime()
+
+class Gato():
+    def __init__(self, nome):
+        self.especie = 'Felinos'
+        self.nome = nome
+        print('%s é da especie dos %s' %(nome, self.especie))
+
+nome_gato = input('Digite o nome do seu gato: ')
+g1 = Gato(nome_gato)
+        
+        
+        
+        
+
+# Criando a classe livro com parâmetros no método construtor.
+# Aqui a classe livro é sobrescrita.
+
+class Livro():
+    def __init__(self, titulo, isbn):
+        self.titulo = titulo
+        self.isbn = isbn
+        print('Contrutor chamado para criar um objeto desta classe.')
+        
+    def imprime(self, titulo, isbn):
+        print('Este é o livro %s e ISBN %d' %(titulo, isbn))
+        
+    
+
+# Criando objeto Livro2 que é uma instância da classe livro.
+Livro2 = Livro('A menina que Roubava Livros', 77886611)
+
+Livro2.titulo
+
+Livro2.imprime('Amenina que Roubava Livros', 77886611)
+
+# Criando classe cachorro.
+class Cachorro():
+    def __init__(self, raca):
+        self.raca = raca
+
+# Criando um objeto a partir da classe cachorro
+Rex = Cachorro(raca = 'Fila-Brasileiro')
+
+# Criando um objeto a partir da classe cachorro
+Golias = Cachorro(raca = 'Dobermman')
+
+# Atributo da classe cachorro, utilizado pelo objeto criado.
+Rex.raca
+
+Golias.raca
