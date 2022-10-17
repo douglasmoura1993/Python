@@ -1,0 +1,73 @@
+url: https://wiki.python.org.br/ExerciciosClasses
+Classe Bola: Crie uma classe que modele uma bola:
+
+Atributos: Cor, circunferência, material
+Métodos: trocaCor e mostraCor
+
+class bola:
+    def __init__(self, cor, circunderencia, material):
+        self.cor = cor
+        self.circunferencia = circunderencia
+        self.material = material
+
+    def trocaCor(self):
+       self.cor = 'Rosa'
+       return self.cor
+
+    def mostrarCor(self):
+       self.trocaCor()
+       return self.trocaCor()
+
+# Passando cor azul.
+dou = bola('Azul', 10, 'Couro')
+
+Classe Quadrado: Crie uma classe que modele um quadrado:
+
+Atributos: Altura, Base e Área(default)
+Métodos: Mudar altura e base, Retornar valor do Lado e calcular Área;
+
+# Declarando e criando a classe Quad.
+class Quad:
+    # Método contrutor que recebe altura, base e área.
+    def __init__(self, base = 1, altura = 1,  area = 0):
+        # Atributos da classe Quad.
+        self.base = base
+        self.altura = altura
+        self.area = (self.base * self.altura)
+    # Método que faz a troca dos valores para ver a área de um novo quadrado.
+    def manipularQuadrado(self):
+        # Definição de variáveis e input de dados para base e altura.
+        n_base = float(input('Base?: '))
+        n_altura =float(input('Altura?: '))
+        # Armazenado os novos valores nos atributos da classe.
+        self.altura = n_altura
+        self.base = n_base
+    # Método que faz a operção da área do quadrado (A = b . h)
+    def calcularArea(self):
+       # É importante faz a tipagem dos dados para fazer operações matemáticas.
+       # Ver input no método manipularQuadrado.
+       return print(self.base * self.altura)
+
+# Função main() para fazer o instanciamento da classe e uso dos métodos.
+# É possível acrescentar operaçãoes com podemos ver abaixo.
+def main():
+    # Instânciando a classe Quad na variável t1. Os parâmetros são sempre necessários.
+    t1 = Quad(10, 5, 5)
+    # Função trocar(), pergunta se o usuário quer manipular via teclado um quadrado.
+    # Caso a função não seja usada ele retornará a área passada na instância da classe.
+    def trocar():
+        # Persunta se o usuário quer trocar os valores de base e altura.
+        resposta = input('Deseja trocar a área do quadrado?[s/n]:')
+        if resposta.lower() == 's':
+            # Chamando o método que manipula o quadrado.
+            t1.manipularQuadrado()
+            # Chamando método que calcula a área com os novos valores
+            t1.calcularArea()
+        else:
+            # Retorna o valor que foi passado na criação do objeto.
+            print(t1.area)
+    # Chamando a função trocar()
+    trocar()
+
+# Chamando a função main()
+main()
