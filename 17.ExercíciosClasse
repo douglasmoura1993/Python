@@ -71,3 +71,63 @@ def main():
 
 # Chamando a função main()
 main()
+
+Classe Retangulo: Crie uma classe que modele um retangulo:
+
+Atributos: LadoA, LadoB (ou Comprimento e Largura, ou Base e Altura, a escolher)
+Métodos: Mudar valor dos lados, Retornar valor dos lados, calcular Área e calcular Perímetro;
+Crie um programa que utilize esta classe. Ele deve pedir ao usuário que informe as medidades de um local. 
+Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de rodapés necessárias para o local.
+
+
+class QtdPiso:
+
+    def __init__(self, altura = 0, base = 0):
+        self.base = base
+        self.altura = altura
+
+    def areaRetangulo(self, base = 0, altura = 0):
+        areaRetangulo = base * altura
+        return areaRetangulo
+
+    def areaPiso(self, base = 0, altura = 0):
+        areaPiso = (base/100 * altura/100)
+        return areaPiso
+    def qtdPiso(self, areaRetangulo, areaPiso):
+       qtdTotal = areaRetangulo / areaPiso
+       return qtdTotal
+    def rodaPe(self, qtdVao, areaRetangulo):
+        i = 0
+        acumulador = 0
+        while i < qtdVao:
+            i =+ 1
+            vlrVao = float(input('Valor do vão:'))
+            acumulador = vlrVao + acumulador
+        perCent = ((areaRetangulo * 10)/100)
+        rodaPe = (areaRetangulo - acumulador) + perCent
+        return rodaPe
+
+def main():
+    novoObj = QtdPiso(0, 0)
+    print('-------Calculo de Peça x Área-------')
+    print('*********** Calculo Área ***********')
+    br = float(input('Base da Área: '))
+    ar = float(input('Altura da Área: '))
+    aret = novoObj.areaRetangulo(br, ar)
+    print('******** Calculo Área Piso *********')
+    bp = float(input('Base da Peça: '))
+    ap = float(input('Altura da Peça: '))
+    apiso = novoObj.areaPiso(bp, ap)
+    qtdPiso = novoObj.qtdPiso(aret, apiso)
+    print('******** QTD RodaPe *********')
+    rp = int(input('Quantos vãos na área?:'))
+    qtdRodaPe = novoObj.rodaPe(rp, aret)
+    print('************ Resultado *************')
+    print(f'> Em uma árede de{aret: .2f} M², '
+          f'\nsão necessários{qtdPiso: .4f} peças.'
+          f'\n> Para Roda Pé serão necessários {qtdRodaPe: .2f} M².'
+          f'\n> Podemos considera {qtdPiso/2: .4} peças.')
+
+main()
+
+
